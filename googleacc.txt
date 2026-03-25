@@ -1,0 +1,23 @@
+3)Write a Test case for https://accounts.google.com page Functionality using 
+
+
+Selenium.
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+public class demo1 {
+public static void main(String[] args) throws InterruptedException {
+// TODO Auto-generated method stub
+ WebDriver driver = new ChromeDriver();
+ driver.get("http:\\www.gmail.com");
+ 
+driver.findElement(By.cssSelector("#identifierId")).sendKeys("sangolacollegeecs11@gmail.com
+");
+ Thread.sleep(5000);
+ driver.findElement(By.cssSelector("#identifierNext > div > button > span")).click();
+ Thread.sleep(5000);
+ driver.findElement(By.cssSelector("#password > div.aCsJod.oJeWuf > div > div.Xb9hP > 
+input")).sendKeys("Sangola@12");
+ Thread.sleep(5000);
+ driver.findElement(By.cssSelector("#identifierNext > div > button > span")).click();
+} }

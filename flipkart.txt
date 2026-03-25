@@ -1,0 +1,28 @@
+2)Write a Test case for https://www.flipkart.com page Functionality using Selenium.
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+public class demo1 {
+public static void main(String[] args) throws InterruptedException {
+// TODO Auto-generated method stub
+ WebDriver driver = new ChromeDriver();
+ driver.get("http:\\www.flipkart.com");
+ driver.findElement(By.cssSelector("#container > div > div.q8WwEU > div > div > div > 
+div > div > div > div > div > div._2nl6Ch > div > header > div._3ZqtNW > 
+div._3NorZ0._3jeYYh > form > div > div > input")).sendKeys(Keys.ENTER);
+ WebElement searchBox = driver.findElement(By.name("q"));
+ searchBox.sendKeys("oppo mobile");
+ Thread.sleep(5000);
+ searchBox.sendKeys(Keys.ENTER);
+ driver.findElement(By.cssSelector("#container > div > div.nt6sNV.JxFEK3._48O0EI > 
+div.DOjaWF.YJG4Cf > div:nth-child(2) > div:nth-child(2) > div > div > div > a > 
+div.yKfJKb.row > div.col.col-7-12 > div.KzDlHZ")).click();
+ Thread.sleep(5000);
+ driver.findElement(By.cssSelector("#container > div > 
+div._39kFie.N3De93.JxFEK3._48O0EI > div.DOjaWF.YJG4Cf > div.DOjaWF.gdgoEp.col-5-
+12.MfqIAz > div:nth-child(2) > div > ul > li:nth-child(1) > button")).click();
+} }

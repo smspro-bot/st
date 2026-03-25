@@ -1,0 +1,20 @@
+4)Write a Test case for https://www.theknowledgeacademy.com page Functionality 
+using Selenium.
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+public class demo1 {
+public static void main(String[] args) throws InterruptedException {
+// TODO Auto-generated method stub
+ WebDriver driver = new ChromeDriver();
+ driver.get("https://www.theknowledgeacademy.com");
+ driver.findElement(By.cssSelector("#page_index > div.home-banner > div.main-bannertext 
+> div > div > div.search > input")).sendKeys("Java programming");
+ //Thread.sleep(5000);
+ driver.findElement(By.cssSelector("#page_index > div.home-banner > div.main-bannertext 
+> div > div > div.search > div > img")).click();
+ //Thread.sleep(5000);
+ 
+} }
